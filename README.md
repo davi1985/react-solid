@@ -4,7 +4,7 @@
 
 This repo contains all code exemplify in e-book React Solid.
 
-[Download the PDF](https://davi1985.github.io/react-solid/react-solid.pdf)
+[Download the PDF](https://github.com/davi1985/react-solid/blob/main/public/react-solid.pdf)
 
 ## :white_check_mark: Requirements
 
