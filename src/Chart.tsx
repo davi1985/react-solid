@@ -1,22 +1,26 @@
-export type Widget = {
-  type: 'chart' | 'table'
-  data: any
-  title?: string
-  columns?: string[]
-  rows?: string[][]
+export type ChartWidget = {
+  type: 'chart'
+  data: number[]
+  title: string
 }
-type ChartProps = { data: number[]; title: string }
-type TableProps = { columns: string[]; rows: string[][] }
+
+export type TableWidget = {
+  type: 'table'
+  columns: string[]
+  rows: string[][]
+}
+
+export type Widget = ChartWidget | TableWidget
 type DashboardProps = { widgets: Widget[] }
 
-const Chart = ({ title, data }: ChartProps) => (
+const Chart = ({ title, data }: ChartWidget) => (
   <div>
     <h2>{title}</h2>
     <div>{JSON.stringify(data)}</div>
   </div>
 )
 
-const Table = ({ columns, rows }: TableProps) => (
+const Table = ({ columns, rows }: TableWidget) => (
   <table>
     <thead>
       <tr>
@@ -40,12 +44,12 @@ const Table = ({ columns, rows }: TableProps) => (
 
 export const Dashboard = ({ widgets }: DashboardProps) => (
   <div>
-    {widgets.map(({ title, data, type, columns, rows }, index) => {
-      if (type === 'chart') {
-        return <Chart key={index} data={data as number[]} title={title!} />
+    {widgets.map((widget, index) => {
+      if (widget.type === 'chart') {
+        return <Chart key={index} {...widget} />
       }
 
-      return <Table key={index} columns={columns!} rows={rows!} />
+      return <Table key={index} {...widget} />
     })}
   </div>
 )

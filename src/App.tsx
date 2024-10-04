@@ -8,7 +8,6 @@ export const App = () => {
       title: 'Sample Chart',
     },
     {
-      data: [],
       type: 'table',
       columns: ['Name', 'Age', 'City'],
       rows: [
