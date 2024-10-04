@@ -1,9 +1,19 @@
-type InputProps = { type: string; placeholder: string }
+import { InputHTMLAttributes } from 'react'
 
-export const Input = ({ type, placeholder }: InputProps) => (
+type InputProps = InputHTMLAttributes<HTMLInputElement>
+
+export const Input = ({ placeholder, ...props }: InputProps) => (
   <input
     className="bg-gray-200 py-2 px-4 rounded-md"
-    type={type}
     placeholder={placeholder}
+    {...props}
   />
+)
+
+export const TextInput = ({ ...props }: InputProps) => (
+  <input {...props} className="bg-gray-200 py-2 px-4 rounded-md" />
+)
+
+export const Password = ({ ...props }: InputProps) => (
+  <input {...props} className="bg-gray-200 py-2 px-4 rounded-md" />
 )
