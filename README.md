@@ -4,6 +4,8 @@
 
 This repo contains all code exemplify in e-book React Solid.
 
+[Download the PDF](https://davi1985.github.io/react-solid/react-solid.pdf)
+
 ## :white_check_mark: Requirements
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
