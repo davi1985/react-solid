@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+<h1 align="center">React Solid</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## :dart: About
 
-Currently, two official plugins are available:
+This repo contains all code exemplify in e-book React Solid.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## :white_check_mark: Requirements
 
-## Expanding the ESLint configuration
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## :checkered_flag: Starting
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+# Clone this project
+$ git clone https://github.com/davi1985/react-solid
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# Access
+$ cd react-solid
+
+# Install dependencies
+$ yarn
+
+# Run the project
+$ yarn start
+
+# Select one of branch to view code
+$ git checkout 01-srp
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## :memo: Pay me a coffee
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+If you enjoy this content and would like to support my creative efforts, please consider contributing any amount using the PIX key:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+Pix Key: +5588988746494
+Holder: Davi Pereira da Silva
+```
+
+Made with :heart: by <a href="https://github.com/davi1985" target="_blank">Davi Silva</a>
+
+&#xa0;
+
+<a href="#top">Back to top</a>
