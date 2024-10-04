@@ -1,22 +1,15 @@
 import { FormEvent, useState } from 'react'
 
-export const LoginForm = () => {
+type FormProps = {
+  onSubmit(ev: FormEvent): Promise<void>
+}
+
+const Form = ({ onSubmit }: FormProps) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
 
-  const handleSubmit = async (ev: FormEvent) => {
-    ev.preventDefault()
-
-    try {
-      const formData = new FormData(ev.currentTarget)
-      await axios.post('https://myapi.com/login', formData)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={onSubmit}>
       <div>
         <label>Name:</label>
         <input
@@ -40,4 +33,18 @@ export const LoginForm = () => {
       <button type="submit">Submit</button>
     </form>
   )
+}
+
+export const LoginForm = () => {
+  const handleSubmit = async (ev: FormEvent) => {
+    ev.preventDefault()
+
+    try {
+      await axios.post('https://myapi.com/login', formData)
+    } catch (err) {
+      console.error(err.message)
+    }
+  }
+
+  return <Form onSubmit={handleSubmit} />
 }
