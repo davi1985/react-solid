@@ -32,12 +32,7 @@ $ git checkout 01-srp
 
 ## :memo: Pay me a coffee
 
-If you enjoy this content and would like to support my creative efforts, please consider contributing any amount using the PIX key:
-
-```
-Pix Key: +5588988746494
-Holder: Davi Pereira da Silva
-```
+If you enjoy this content and would like to support my creative efforts see the [CONTRIBUTION](CONTRIBUTION.md) file.
 
 Made with :heart: by <a href="https://github.com/davi1985" target="_blank">Davi Silva</a>
 
