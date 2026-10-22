@@ -34,6 +34,10 @@ $ git checkout 01-srp
 
 If you enjoy this content and would like to support my creative efforts see the [CONTRIBUTION](CONTRIBUTION.md) file.
 
+## :memo: License
+
+This project is under the [MIT license](./LICENSE).
+
 Made with :heart: by <a href="https://github.com/davi1985" target="_blank">Davi Silva</a>
 
 &#xa0;
